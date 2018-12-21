@@ -1,10 +1,15 @@
 #ifndef LINKED_LIST
 #define LINKED_LIST
-namespace linkedList {
-	struct linkedListNode {
-		int value;
-		linkedListNode * next;
-	};
-}
+#include <iostream>
+#include <vector>
 
-struct linkedList * arrToList (int * array);
+struct linkedListNode {
+	int value;
+	linkedListNode * next;
+	linkedListNode(int);
+};
+
+void printLinkedList(linkedListNode*);
+struct linkedListNode * vectorToList (std::vector<int> );
+
+#endif
