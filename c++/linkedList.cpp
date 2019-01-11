@@ -21,6 +21,5 @@ void printLinkedList(linkedListNode*head) {
 		std::cout << "\n";
 		head = head->next;
 	}
-
 }
 

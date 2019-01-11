@@ -29,13 +29,3 @@ void Queue::printQueue () {
 	printLinkedList(head);
 }
 
-int main () {
-	class Queue* q = new Queue();
-	q->addElement(1);
-	q->addElement(2);
-	q->addElement(3);
-	q->printQueue();
-	q->popElement();
-	q->printQueue();
-	return 0;
-}
