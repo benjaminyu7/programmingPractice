@@ -8,8 +8,9 @@ using DataStructures.Factory;
 
 var removeDuplicates = new RemoveDuplicates();
 
-Node<int>? head = removeDuplicates.RemoveDuplicateSet(LinkedListFactory.ListToLinkedList(new List<int>(){1,5,7,7,5,5,6,6,2,3,4,5}));
-LinkedListHelper.printLinkedList(head);
-
-head = removeDuplicates.RemoveDuplicatesNoMem(LinkedListFactory.ListToLinkedList(new List<int>(){1,5,7,7,5,5,6,6,2,3,4,5}));
-LinkedListHelper.printLinkedList(head);
+TreeNode head = new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)));
+var output = BinaryTreeSerialize.Serialize(head);
+Console.WriteLine(output);
+var deserializeOutput = BinaryTreeSerialize.Deserialize("1,2,3,1002,1002,4,5,6,7");
+output = BinaryTreeSerialize.Serialize(deserializeOutput);
+Console.WriteLine(output);
